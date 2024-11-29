@@ -1,1 +1,33 @@
+EDUARDO FLOR OCAMPO - 242014328
+EXERCICIO 2: EQUAÇÃO DA RETA
 
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main () {
+    float x1, y1, x2, y2, x3, y3;
+    cout << "Diga as coordenadas x e y, respectivamente, do primeiro ponto: ";    
+    cin >> x1 >> y1;
+    cout << endl << "agora as coordenadas do ponto 2: ";
+    cin >> x2 >> y2;
+    cout << endl << "agora as coordenadas do ponto 3: ";
+    cin >> x3 >> y3;
+
+    //vendo os parâmetros:
+    float a = (y2-y1)/(x2-x1);
+    float b = y1 - a * x1;
+    
+    // se o terceiro pertencer a reta a equação é a mesma:
+     bool pertencealinha = (y3 == a * x3 + b);
+
+    cout << fixed << setprecision(2) << "y = " << a << " * x + (" << b << ")" << endl;
+    if (pertencealinha) {
+        cout << "O PONTO (" << x3 << ", " << y3 << ") PERTENCE A RETA" << endl;
+    } else {
+        cout << "O PONTO (" << x3 << ", " << y3 << ") NAO PERTENCE A RETA" << endl;
+    }
+
+    return 0;
+}
