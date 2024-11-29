@@ -1,2 +1,24 @@
-# PROVA-1.CPE.EDUARDOFLOR
 EDUARDO FLOR OCAMPO - 242014328
+EXERCICIO 1: TRIPLOS PITAGÓRICOS
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    cout << "Triplos pitagoricos para lados a,b e h:" << endl;
+    
+    // Executando para cada valor de a,b e h que esteja dentro das regras de triangulo e pitágoras:
+    for(int a=1; a<=20; a++){
+        for(int b=1; b<=a; b++){
+            for(int h=b ; h<=(a+b); h++){
+                if((h*h) == (a*a)+(b*b)){
+                    cout << "a: " << a << ", " << "b: " << b << ", " << "h: " << h << endl;
+                }
+            }
+        }
+    }
+   
+
+    return 0;
+}
